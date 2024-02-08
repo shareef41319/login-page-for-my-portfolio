@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:#1C202C;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ring {
+  position: relative;
+  width: 700px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring .ri {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #ffffff;
+  transition: 0.5s;
+}
+
+.ring .ri:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+  border: 2px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.ring .ri:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+  border: 2px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.ring .ri:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+  border: 2px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.ring:hover .ri {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.login {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login h2 {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: rgb(255, 255, 255);
+  box-shadow: none;
+  outline: none;
+}
+.login .inputBx .password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.login .inputBx .password-toggle-icon i {
+  color: #ffffff;
+}
+.login .inputBx input[type="submit"] {
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  border: none;
+  cursor: pointer;
+}
+
+.login .inputBx input[type="submit"]:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  background: linear-gradient(45deg, #fff172, #ff357a);
+  color: rgb(255, 255, 255);
+}
+
+.login .inputBx input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.login .links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.inputBx {
+  color: rgb(255, 255, 255);
+}
+
+#remember {
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1.2em;
+  width: 180px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.login .inputBx input[type="submit"]:hover {
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.signup{
+  text-align: center;
+  font-size: 2em;
+  color: #0ef; 
+  position: relative;
+  animation: glowAnimation 4s linear infinite;
+}
+@keyframes glowAnimation {
+  0%, 100% {
+    color: #0ef; 
+    text-shadow: 0 0 10px rgba(14, 239, 255, 0.8), 0 0 20px rgba(14, 239, 255, 0.8), 0 0 30px rgba(14, 239, 255, 0.8);
+  }
+}
+
+
